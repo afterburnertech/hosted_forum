@@ -12,6 +12,6 @@ feature 'Accounts' do
 		click_button "Create Account"
 		page.should have_content("Your account has been successfully created.")
 		page.should have_content("Signed in as subscribem@example.com")
-		page.current_url.should == "http://text.example.com/"
+		page.current_url.should == "http://test.example.com/"
 	end
 end
