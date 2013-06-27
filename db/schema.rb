@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626142657) do
+ActiveRecord::Schema.define(:version => 20130626224721) do
 
   create_table "forem_categories", :force => true do |t|
     t.string   "name",       :null => false
@@ -130,6 +130,14 @@ ActiveRecord::Schema.define(:version => 20130626142657) do
     t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "subscribem_plans", :force => true do |t|
+    t.string   "name"
+    t.integer  "amount"
+    t.string   "braintree_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "subscribem_users", :force => true do |t|
