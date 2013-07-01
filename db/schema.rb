@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626224721) do
+ActiveRecord::Schema.define(:version => 20130627181415) do
 
   create_table "forem_categories", :force => true do |t|
     t.string   "name",       :null => false
@@ -121,6 +121,7 @@ ActiveRecord::Schema.define(:version => 20130626224721) do
     t.datetime "updated_at", :null => false
     t.integer  "owner_id"
     t.string   "subdomain"
+    t.integer  "plan_id"
   end
 
   add_index "subscribem_accounts", ["subdomain"], :name => "index_subscribem_accounts_on_subdomain"
